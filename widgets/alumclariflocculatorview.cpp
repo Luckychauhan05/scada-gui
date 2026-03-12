@@ -452,6 +452,7 @@ void AlumClariflocculatorView::buildScene()
     const QRectF inletRect(700, 285, 160, 195);
     const QRectF flashRect(930, 285, 190, 195);
     const QRectF clarRect(1220, 235, 300, 355);
+    const QRectF sludgeTankRect(1160, 700, 380, 110);
 
     // ── Background tanks ─────────────────────────────────────────────────────
     addRoundedTank(m_scene, backwashRect, QColor("#CBEAF2"));
@@ -504,6 +505,13 @@ void AlumClariflocculatorView::buildScene()
             LabelLayer);
 
     addRoundedTank(m_scene, clarRect, QColor("#CFDCE5"));
+        addRoundedTank(m_scene, sludgeTankRect, QColor("#D9E4EC"));
+        addCenteredText(m_scene,
+            "SLUDGE / WASTE\nWATER TANK",
+            QFont("Segoe UI", 10, QFont::Bold),
+            QColor("#2B3F4B"),
+            sludgeTankRect,
+            LabelLayer);
 
     // Water fill inside clariflocculator (upper half)
     auto *clarWater = m_scene->addRect(QRectF(clarRect.left() + 12,
@@ -736,37 +744,39 @@ void AlumClariflocculatorView::buildScene()
     addPipe(QVector<QPointF>(flashToClar.begin(), flashToClar.end()), transferColor);
     addFlowDot(flashToClar, transferColor, 0.3, 0.006);
 
-    // ── Filter outlet (yellow) ────────────────────────────────────────────────
+    // ── Clarified water outlet (yellow): upper side overflow to filtration ───
+    // Clarified water outlet: slightly below water top, longer pipe, label above pipe
+    const qreal clarOverflowY = clarRect.top() + 120.0; // moved lower
+    const qreal filterPipeEndX = 1750.0;               // extended beyond screen edge
     QList<QPointF> filterPath = {
-        QPointF(clarRect.center().x() + 28, clarRect.bottom()),
-        QPointF(clarRect.center().x() + 28, 690),
-        QPointF(1545, 690)
+        QPointF(clarRect.right(), clarOverflowY),
+        QPointF(filterPipeEndX, clarOverflowY)
     };
     addPipe(QVector<QPointF>(filterPath.begin(), filterPath.end()), filterOutletColor);
-    addArrow(QPointF(1545, 690), 0);
+    addArrow(QPointF(filterPipeEndX, clarOverflowY), 0);
     addFlowDot(filterPath, filterOutletColor, 0.0, 0.005);
 
+    // Label above the pipe, outside tank body
     addText(m_scene,
-        "TO FILTER BEDS",
+        "TO FILTRATION STAGE",
         QFont("Segoe UI", 9, QFont::Bold),
         QColor("#6B5712"),
-        QPointF(1416, 662),
+        QPointF(clarRect.right() + 10, clarOverflowY - 22),
         LabelLayer);
 
-    // ── Waste outlet (pink) ───────────────────────────────────────────────────
+    // ── Sludge outlet (pink): bottom center to sludge/waste water tank ──────
     QList<QPointF> wastePath = {
-        QPointF(clarRect.center().x() - 56, clarRect.bottom()),
-        QPointF(clarRect.center().x() - 56, 765),
-        QPointF(1545, 765)
+        QPointF(clarRect.center().x(), clarRect.bottom()),
+        QPointF(clarRect.center().x(), sludgeTankRect.top())
     };
     addPipe(QVector<QPointF>(wastePath.begin(), wastePath.end()), wasteOutletColor);
-    addArrow(QPointF(1545, 765), 0);
+    addArrow(QPointF(clarRect.center().x(), sludgeTankRect.top() + 2), 90);
     addFlowDot(wastePath, wasteOutletColor, 0.5, 0.005);
 
     addText(m_scene,
-        "TO WASTE WATER TANK",
+        "SLUDGE DISCHARGE",
         QFont("Segoe UI", 9, QFont::Bold),
         QColor("#8E2550"),
-        QPointF(1328, 737),
+        QPointF(clarRect.center().x() + 16, 646),
         LabelLayer);
 }
