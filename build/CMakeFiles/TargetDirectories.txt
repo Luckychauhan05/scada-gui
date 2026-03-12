@@ -1,0 +1,4 @@
+/home/lucky/Documents/GUI application/build/CMakeFiles/IndustrialScadaQt.dir
+/home/lucky/Documents/GUI application/build/CMakeFiles/edit_cache.dir
+/home/lucky/Documents/GUI application/build/CMakeFiles/rebuild_cache.dir
+/home/lucky/Documents/GUI application/build/CMakeFiles/IndustrialScadaQt_autogen.dir

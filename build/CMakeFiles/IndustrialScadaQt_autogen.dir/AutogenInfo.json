@@ -1,0 +1,530 @@
+{
+	"BUILD_DIR" : "/home/lucky/Documents/GUI application/build/IndustrialScadaQt_autogen",
+	"CMAKE_BINARY_DIR" : "/home/lucky/Documents/GUI application/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/lucky/Documents/GUI application/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/lucky/Documents/GUI application",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/lucky/Documents/GUI application/CMakeLists.txt",
+		"/home/lucky/Documents/GUI application/build/CMakeFiles/3.25.1/CMakeSystem.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake",
+		"/home/lucky/Documents/GUI application/build/CMakeFiles/3.25.1/CMakeCXXCompiler.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeGenericSystem.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake",
+		"/usr/share/cmake-3.25/Modules/Platform/Linux.cmake",
+		"/usr/share/cmake-3.25/Modules/Platform/UnixPaths.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeCXXInformation.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake",
+		"/usr/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake",
+		"/usr/share/cmake-3.25/Modules/Compiler/GNU.cmake",
+		"/usr/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/usr/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake",
+		"/usr/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake",
+		"/usr/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake",
+		"/usr/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicAppleHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTestHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicToolHelpers.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake",
+		"/usr/share/cmake-3.25/Modules/FindThreads.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckLibraryExists.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckIncludeFileCXX.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake",
+		"/usr/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake",
+		"/usr/share/cmake-3.25/Modules/GNUInstallDirs.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
+		"/usr/share/cmake-3.25/Modules/FindOpenGL.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPkgConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FeatureSummary.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake",
+		"/usr/share/cmake-3.25/Modules/FindVulkan.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake",
+		"/usr/share/cmake-3.25/Modules/MacroAddFileDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/lucky/Documents/GUI application",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/lucky/Documents/GUI application/pages/alarms.h",
+			"MU",
+			"P2WXERC3RM/moc_alarms.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/alumclariflocculator.h",
+			"MU",
+			"P2WXERC3RM/moc_alumclariflocculator.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/controlpanel.h",
+			"MU",
+			"P2WXERC3RM/moc_controlpanel.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/dashboard.h",
+			"MU",
+			"P2WXERC3RM/moc_dashboard.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/filtrationdashboard.h",
+			"MU",
+			"P2WXERC3RM/moc_filtrationdashboard.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/mimic.h",
+			"MU",
+			"P2WXERC3RM/moc_mimic.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/monitoring.h",
+			"MU",
+			"P2WXERC3RM/moc_monitoring.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/settings.h",
+			"MU",
+			"P2WXERC3RM/moc_settings.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/trends.h",
+			"MU",
+			"P2WXERC3RM/moc_trends.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/src/datasimulator.h",
+			"MU",
+			"UVLADIE3JM/moc_datasimulator.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/src/mainwindow.h",
+			"MU",
+			"UVLADIE3JM/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/src/usermanager.h",
+			"MU",
+			"UVLADIE3JM/moc_usermanager.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/alumclariflocculatorview.h",
+			"MU",
+			"IMAN36LHMA/moc_alumclariflocculatorview.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/blowercontrolpanel.h",
+			"MU",
+			"IMAN36LHMA/moc_blowercontrolpanel.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/eventlogwidget.h",
+			"MU",
+			"IMAN36LHMA/moc_eventlogwidget.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/flowcomponents.h",
+			"MU",
+			"IMAN36LHMA/moc_flowcomponents.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/processflowview.h",
+			"MU",
+			"IMAN36LHMA/moc_processflowview.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/processmimicwidget.h",
+			"MU",
+			"IMAN36LHMA/moc_processmimicwidget.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/pumpcontrolfaceplate.h",
+			"MU",
+			"IMAN36LHMA/moc_pumpcontrolfaceplate.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/sensorcard.h",
+			"MU",
+			"IMAN36LHMA/moc_sensorcard.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/statusindicator.h",
+			"MU",
+			"IMAN36LHMA/moc_statusindicator.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/tankwidget.h",
+			"MU",
+			"IMAN36LHMA/moc_tankwidget.cpp",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/valveindicator.h",
+			"MU",
+			"IMAN36LHMA/moc_valveindicator.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/lucky/Documents/GUI application/build/IndustrialScadaQt_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/lucky/Documents/GUI application/build/IndustrialScadaQt_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CHARTS_LIB",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/lucky/Documents/GUI application",
+		"/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt6",
+		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt6/QtCharts",
+		"/usr/include/x86_64-linux-gnu/qt6/QtOpenGL",
+		"/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets",
+		"/usr/include",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_GADGET_EXPORT",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/lucky/Documents/GUI application/build/IndustrialScadaQt_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/lucky/Documents/GUI application/build/CMakeFiles/IndustrialScadaQt_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 4,
+	"SETTINGS_FILE" : "/home/lucky/Documents/GUI application/build/CMakeFiles/IndustrialScadaQt_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/lucky/Documents/GUI application/pages/alarms.cpp", "MU", null ],
+		[
+			"/home/lucky/Documents/GUI application/pages/alumclariflocculator.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/controlpanel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/dashboard.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/filtrationdashboard.cpp",
+			"MU",
+			null
+		],
+		[ "/home/lucky/Documents/GUI application/pages/mimic.cpp", "MU", null ],
+		[
+			"/home/lucky/Documents/GUI application/pages/monitoring.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/pages/settings.cpp",
+			"MU",
+			null
+		],
+		[ "/home/lucky/Documents/GUI application/pages/trends.cpp", "MU", null ],
+		[
+			"/home/lucky/Documents/GUI application/src/datasimulator.cpp",
+			"MU",
+			null
+		],
+		[ "/home/lucky/Documents/GUI application/src/main.cpp", "MU", null ],
+		[
+			"/home/lucky/Documents/GUI application/src/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/src/usermanager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/alumclariflocculatorview.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/blowercontrolpanel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/eventlogwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/flowcomponents.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/processflowview.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/processmimicwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/pumpcontrolfaceplate.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/sensorcard.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/statusindicator.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/tankwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/lucky/Documents/GUI application/widgets/valveindicator.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
