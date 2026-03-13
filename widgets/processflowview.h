@@ -9,6 +9,7 @@ class QGraphicsScene;
 class QGraphicsEllipseItem;
 class FlowArrow;
 class Pipeline;
+class Blower;
 class QTimer;
 class ValveIndicator;
 class ManualValveIndicator;
@@ -60,6 +61,7 @@ private:
     QList<FlowArrow *> m_arrows;
     QMap<QString, ValveIndicator *> m_valves;
     QMap<QString, ManualValveIndicator *> m_mvValves;
+    QMap<QString, Blower *> m_blowers;
     QMap<QString, QPointF> m_blowerPositions;
     QMap<QString, bool> m_blowerRunning;
     QTimer *m_flowTimer;

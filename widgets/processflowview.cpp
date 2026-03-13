@@ -144,6 +144,17 @@ void ProcessFlowView::animateFlowDots()
         const QPointF pos = polylinePoint(dot.path, dot.t);
         dot.item->setRect(pos.x() - 4, pos.y() - 4, 8, 8);
     }
+
+    // Rotate blower internals only while each blower is running.
+    for (auto it = m_blowers.begin(); it != m_blowers.end(); ++it) {
+        Blower *blower = it.value();
+        if (!blower) {
+            continue;
+        }
+        const bool running = m_blowerRunning.value(it.key(), true);
+        blower->setRunning(running);
+        blower->stepRotation(9.0);
+    }
 }
 
 void ProcessFlowView::toggleAlarmState()
@@ -160,6 +171,11 @@ void ProcessFlowView::resetState()
 
     for (auto it = m_blowerRunning.begin(); it != m_blowerRunning.end(); ++it) {
         it.value() = true;
+    }
+    for (auto it = m_blowers.begin(); it != m_blowers.end(); ++it) {
+        if (it.value()) {
+            it.value()->setRunning(true);
+        }
     }
 
     for (auto it = m_mvValves.begin(); it != m_mvValves.end(); ++it) {
@@ -181,6 +197,7 @@ void ProcessFlowView::buildScene()
     m_arrows.clear();
     m_valves.clear();
     m_mvValves.clear();
+    m_blowers.clear();
     m_blowerPositions.clear();
     m_blowerRunning.clear();
     m_flowDots.clear();
@@ -246,10 +263,13 @@ void ProcessFlowView::buildScene()
                 QPointF(clarFilter2DropX, clarFilterHeaderY), QPointF(clarFilter2DropX, 180)},
                QColor("#F4C542"), 0.62, 0.006, {"MV9"});
 
+    QFont clarifiedLabelFont("Segoe UI", 8, QFont::Bold);
+    clarifiedLabelFont.setWordSpacing(1.6);
+    clarifiedLabelFont.setLetterSpacing(QFont::PercentageSpacing, 102.0);
     auto *clarifiedLabel = m_scene->addText("CLARIFIED WATER FROM CLARIFLOCCULATOR",
-                                            QFont("Segoe UI", 8, QFont::Bold));
+                                            clarifiedLabelFont);
     clarifiedLabel->setDefaultTextColor(QColor("#6B5712"));
-    clarifiedLabel->setPos(20, 80);
+    clarifiedLabel->setPos(20, 60);
     setLayer(clarifiedLabel, LabelLayer);
 
     // ============ ORANGE: RAW WATER (OVERHEAD -> FILTERS) ============
@@ -440,8 +460,10 @@ void ProcessFlowView::addBlower(const QString &name, const QPointF &pos)
 {
     auto *blower = new Blower(name);
     blower->setPos(pos);
+    blower->setRunning(true);
     setLayer(blower, EquipmentLayer + 1);
     m_scene->addItem(blower);
+    m_blowers.insert(name, blower);
     m_blowerPositions.insert(name, pos);
     m_blowerRunning.insert(name, true);
 }
@@ -473,22 +495,40 @@ void ProcessFlowView::onBlowerClicked(const QString &blowerName)
 
     connect(controlPanel, &BlowerControlPanel::stopClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = false;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(false);
+        }
     });
     connect(controlPanel, &BlowerControlPanel::tripClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = false;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(false);
+        }
     });
     connect(controlPanel, &BlowerControlPanel::runFBFailClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = false;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(false);
+        }
     });
 
     connect(controlPanel, &BlowerControlPanel::startClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = true;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(true);
+        }
     });
     connect(controlPanel, &BlowerControlPanel::runClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = true;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(true);
+        }
     });
     connect(controlPanel, &BlowerControlPanel::runCmdClicked, this, [this, blowerName]() {
         m_blowerRunning[blowerName] = true;
+        if (m_blowers.contains(blowerName) && m_blowers.value(blowerName)) {
+            m_blowers.value(blowerName)->setRunning(true);
+        }
     });
 
     controlPanel->exec();

@@ -40,6 +40,13 @@ class Blower : public QGraphicsItemGroup
 {
 public:
     explicit Blower(const QString &label, QGraphicsItem *parent = nullptr);
+    void setRunning(bool running);
+    void stepRotation(qreal stepDeg = 10.0);
+
+private:
+    QGraphicsItemGroup *m_rotorGroup = nullptr;
+    bool m_running = true;
+    qreal m_rotorAngleDeg = 0.0;
 };
 
 class ManualValveIndicator : public QGraphicsItemGroup

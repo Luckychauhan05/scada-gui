@@ -145,6 +145,10 @@ Blower::Blower(const QString &label, QGraphicsItem *parent)
     addToGroup(housing);
     
     // Impeller blade pattern (6 curved blades like turbine wheel)
+    m_rotorGroup = new QGraphicsItemGroup();
+    m_rotorGroup->setTransformOriginPoint(36, 32);
+    addToGroup(m_rotorGroup);
+
     for (int i = 0; i < 6; ++i) {
         qreal angle = (i * 60.0) * (M_PI / 180.0);
         qreal innerR = 8;
@@ -157,7 +161,7 @@ Blower::Blower(const QString &label, QGraphicsItem *parent)
         
         auto *blade = new QGraphicsLineItem(QLineF(x1, y1, x2, y2));
         blade->setPen(QPen(QColor("#1A3A5A"), 1.7));
-        addToGroup(blade);
+        m_rotorGroup->addToGroup(blade);
         
         // Secondary line for blade depth
         qreal angle2 = angle + 15 * (M_PI / 180.0);
@@ -168,14 +172,14 @@ Blower::Blower(const QString &label, QGraphicsItem *parent)
         
         auto *bladeShadow = new QGraphicsLineItem(QLineF(x3, y3, x4, y4));
         bladeShadow->setPen(QPen(QColor("#2A4A6A"), 1.2));
-        addToGroup(bladeShadow);
+        m_rotorGroup->addToGroup(bladeShadow);
     }
     
     // Center hub
     auto *hub = new QGraphicsEllipseItem(QRectF(29, 25, 14, 14));
     hub->setPen(QPen(QColor("#2A4A6A"), 1.5));
     hub->setBrush(QBrush(QColor("#6A8AC7")));
-    addToGroup(hub);
+    m_rotorGroup->addToGroup(hub);
     
     // Discharge outlet (right side), centered at y=30 for pipe alignment.
     auto *outlet = new QGraphicsRectItem(QRectF(64, 24, 16, 12));
@@ -205,6 +209,27 @@ Blower::Blower(const QString &label, QGraphicsItem *parent)
     text->setDefaultTextColor(QColor("#0D2A38"));
     text->setPos(8, 58);
     addToGroup(text);
+}
+
+void Blower::setRunning(bool running)
+{
+    m_running = running;
+    if (m_rotorGroup) {
+        m_rotorGroup->setOpacity(m_running ? 1.0 : 0.5);
+    }
+}
+
+void Blower::stepRotation(qreal stepDeg)
+{
+    if (!m_running || !m_rotorGroup) {
+        return;
+    }
+
+    m_rotorAngleDeg += stepDeg;
+    if (m_rotorAngleDeg >= 360.0) {
+        m_rotorAngleDeg -= 360.0;
+    }
+    m_rotorGroup->setRotation(m_rotorAngleDeg);
 }
 
 // ============ MANUAL VALVE INDICATOR ============
