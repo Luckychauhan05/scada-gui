@@ -457,7 +457,7 @@ void AlumClariflocculatorView::buildScene()
     // ── Background tanks ─────────────────────────────────────────────────────
     addRoundedTank(m_scene, backwashRect, QColor("#CBEAF2"));
     addCenteredText(m_scene,
-            "BACKWASH WATER TANK",
+            "SERVICE WATER TANK",
             QFont("Segoe UI", 12, QFont::Bold),
             QColor("#10384C"),
             backwashRect,
@@ -653,7 +653,7 @@ void AlumClariflocculatorView::buildScene()
     addJunctionDot(m_scene, QPointF(feedTrunkX, alumTankTwoRect.top()), feedColor);
 
     addText(m_scene,
-        "Backwash water distribution",
+        "Service water distribution",
         QFont("Segoe UI", 8, QFont::Bold),
         QColor("#1D5C2A"),
         QPointF(560, 184),

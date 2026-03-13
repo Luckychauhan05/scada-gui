@@ -211,7 +211,7 @@ void ProcessFlowView::buildScene()
 
     addEquipment("OVERHEAD TANK", QRectF(620, 0, 320, 80), QColor("#E6DFC4"), 10);
 
-    addEquipment("RAPID GRAVITY\nFILTER - 1", QRectF(250, 180, 360, 130), QColor("#D7E5EA"), 11);
+    addEquipment("RAPID GRAVITY\nFILTER - 1", QRectF(280, 180, 360, 130), QColor("#D7E5EA"), 11);
     addEquipment("RAPID GRAVITY\nFILTER - 2", QRectF(850, 180, 360, 130), QColor("#D7E5EA"), 11);
 
     addEquipment("CLEAR WATER TANK", QRectF(620, 430, 320, 100), QColor("#D4E5ED"), 10);
@@ -294,7 +294,7 @@ void ProcessFlowView::buildScene()
     addPipeline({QPointF(140, 390), QPointF(250, 390)}, QColor("#2ECC71"), 6.0, {}, {"BLOWER 3"});
 
     addPipeline({QPointF(250, 220), QPointF(250, 390)}, QColor("#2ECC71"), 6.0);
-    addPipeline({QPointF(250, 340), QPointF(1110, 340)}, QColor("#2ECC71"), 6.0);
+    addPipeline({QPointF(250, 340), QPointF(1050, 340)}, QColor("#2ECC71"), 6.0);
     addPipeline({QPointF(410, 340), QPointF(410, 310)}, QColor("#2ECC71"), 6.0);
     addPipeline({QPointF(1050, 340), QPointF(1050, 310)}, QColor("#2ECC71"), 6.0);
 
@@ -313,11 +313,11 @@ void ProcessFlowView::buildScene()
     addArrow(QPointF(410, 322), -90, QColor("#2ECC71"));
     addArrow(QPointF(1050, 322), -90, QColor("#2ECC71"));
 
-    addFlowDot({QPointF(140, 220), QPointF(250, 220), QPointF(250, 340), QPointF(1110, 340)},
+    addFlowDot({QPointF(140, 220), QPointF(250, 220), QPointF(250, 340), QPointF(1050, 340)},
                QColor("#2ECC71"), 0.10, 0.006, {}, {"BLOWER 1"});
-    addFlowDot({QPointF(140, 305), QPointF(250, 305), QPointF(250, 340), QPointF(1110, 340)},
+    addFlowDot({QPointF(140, 305), QPointF(250, 305), QPointF(250, 340), QPointF(1050, 340)},
                QColor("#2ECC71"), 0.40, 0.006, {}, {"BLOWER 2"});
-    addFlowDot({QPointF(140, 390), QPointF(250, 390), QPointF(250, 340), QPointF(1110, 340)},
+    addFlowDot({QPointF(140, 390), QPointF(250, 390), QPointF(250, 340), QPointF(1050, 340)},
                QColor("#2ECC71"), 0.70, 0.006, {}, {"BLOWER 3"});
 
     // ============ BLUE: FILTER OUTLET MERGE (FILTERS -> CWT) ============
