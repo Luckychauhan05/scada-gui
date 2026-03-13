@@ -192,7 +192,7 @@ void ProcessFlowView::buildScene()
 
     // ============ EQUIPMENT POSITIONING ============
 
-    addEquipment("OVERHEAD TANK", QRectF(620, 35, 320, 80), QColor("#E6DFC4"), 10);
+    addEquipment("OVERHEAD TANK", QRectF(620, 0, 320, 80), QColor("#E6DFC4"), 10);
 
     addEquipment("RAPID GRAVITY\nFILTER - 1", QRectF(250, 180, 360, 130), QColor("#D7E5EA"), 11);
     addEquipment("RAPID GRAVITY\nFILTER - 2", QRectF(850, 180, 360, 130), QColor("#D7E5EA"), 11);
@@ -219,20 +219,54 @@ void ProcessFlowView::buildScene()
         m_flowDots.append({dot, path, startT, speed, controllingValves, controllingBlowers, color});
     };
 
-    // ============ YELLOW: RAW WATER (OVERHEAD -> FILTERS) ============
-    addPipeline({QPointF(780, 115), QPointF(780, 160)}, QColor("#F4C542"), 8.0, {"MV1"});
-    addPipeline({QPointF(780, 160), QPointF(430, 160), QPointF(430, 180)}, QColor("#F4C542"), 8.0, {"MV1", "MV2"});
-    addPipeline({QPointF(780, 160), QPointF(1030, 160), QPointF(1030, 180)}, QColor("#F4C542"), 8.0, {"MV1", "MV3"});
+    // ============ YELLOW: CLARIFIED WATER INLET (FROM CLARIFLOCCULATOR) ============
+    const qreal clarHeaderY = 112.0;
+    const qreal clarFilterHeaderY = 145.0;
+    const qreal clarFilter1DropX = 410.0;
+    const qreal clarFilter2DropX = 1050.0;
 
-    addJunctionDot(m_scene, QPointF(780, 160), QColor("#F4C542"));
-    addArrow(QPointF(780, 145), 90, QColor("#F4C542"));
-    addArrow(QPointF(430, 172), 90, QColor("#F4C542"));
-    addArrow(QPointF(1030, 172), 90, QColor("#F4C542"));
+    addPipeline({QPointF(0, clarHeaderY), QPointF(clarFilter1DropX, clarHeaderY), QPointF(clarFilter1DropX, clarFilterHeaderY),
+                 QPointF(clarFilter2DropX, clarFilterHeaderY)},
+                QColor("#F4C542"), 8.0, {"MV9"});
+    addPipeline({QPointF(clarFilter1DropX, clarFilterHeaderY), QPointF(clarFilter1DropX, 180)}, QColor("#F4C542"), 8.0, {"MV9"});
+    addPipeline({QPointF(clarFilter2DropX, clarFilterHeaderY), QPointF(clarFilter2DropX, 180)}, QColor("#F4C542"), 8.0, {"MV9"});
 
-    addFlowDot({QPointF(780, 115), QPointF(780, 160), QPointF(430, 160), QPointF(430, 180)},
-               QColor("#F4C542"), 0.08, 0.005, {"MV1", "MV2"});
-    addFlowDot({QPointF(780, 115), QPointF(780, 160), QPointF(1030, 160), QPointF(1030, 180)},
-               QColor("#F4C542"), 0.58, 0.005, {"MV1", "MV3"});
+    addJunctionDot(m_scene, QPointF(clarFilter1DropX, clarHeaderY), QColor("#F4C542"));
+    addJunctionDot(m_scene, QPointF(clarFilter1DropX, clarFilterHeaderY), QColor("#F4C542"));
+    addJunctionDot(m_scene, QPointF(clarFilter2DropX, clarFilterHeaderY), QColor("#F4C542"));
+    addArrow(QPointF(180, clarHeaderY), 0, QColor("#F4C542"));
+    addArrow(QPointF(720, clarHeaderY), 0, QColor("#F4C542"));
+    addArrow(QPointF(clarFilter1DropX, 170), 90, QColor("#F4C542"));
+    addArrow(QPointF(clarFilter2DropX, 170), 90, QColor("#F4C542"));
+
+    addFlowDot({QPointF(0, clarHeaderY), QPointF(clarFilter1DropX, clarHeaderY), QPointF(clarFilter1DropX, clarFilterHeaderY),
+                QPointF(clarFilter1DropX, 180)},
+               QColor("#F4C542"), 0.18, 0.006, {"MV9"});
+    addFlowDot({QPointF(0, clarHeaderY), QPointF(clarFilter1DropX, clarHeaderY), QPointF(clarFilter1DropX, clarFilterHeaderY),
+                QPointF(clarFilter2DropX, clarFilterHeaderY), QPointF(clarFilter2DropX, 180)},
+               QColor("#F4C542"), 0.62, 0.006, {"MV9"});
+
+    auto *clarifiedLabel = m_scene->addText("CLARIFIED WATER FROM CLARIFLOCCULATOR",
+                                            QFont("Segoe UI", 8, QFont::Bold));
+    clarifiedLabel->setDefaultTextColor(QColor("#6B5712"));
+    clarifiedLabel->setPos(20, 80);
+    setLayer(clarifiedLabel, LabelLayer);
+
+    // ============ ORANGE: RAW WATER (OVERHEAD -> FILTERS) ============
+    const QColor overheadFeedColor("#E67E22");
+    addPipeline({QPointF(780, 60), QPointF(780, 120)}, overheadFeedColor, 8.0, {"MV1"});
+    addPipeline({QPointF(780, 120), QPointF(430, 120), QPointF(430, 180)}, overheadFeedColor, 8.0, {"MV1", "MV2"});
+    addPipeline({QPointF(780, 120), QPointF(1030, 120), QPointF(1030, 180)}, overheadFeedColor, 8.0, {"MV1", "MV3"});
+
+    addJunctionDot(m_scene, QPointF(780, 120), overheadFeedColor);
+    addArrow(QPointF(780, 105), 90, overheadFeedColor);
+    addArrow(QPointF(430, 172), 90, overheadFeedColor);
+    addArrow(QPointF(1030, 172), 90, overheadFeedColor);
+
+    addFlowDot({QPointF(780, 60), QPointF(780, 120), QPointF(430, 120), QPointF(430, 180)},
+               overheadFeedColor, 0.08, 0.005, {"MV1", "MV2"});
+    addFlowDot({QPointF(780, 60), QPointF(780, 120), QPointF(1030, 120), QPointF(1030, 180)},
+               overheadFeedColor, 0.58, 0.005, {"MV1", "MV3"});
 
     // ============ GREEN: AIR HEADER (BLOWERS -> COMMON HEADER -> FILTERS) ============
     addPipeline({QPointF(140, 220), QPointF(250, 220)}, QColor("#2ECC71"), 6.0, {}, {"BLOWER 1"});
@@ -315,7 +349,7 @@ void ProcessFlowView::buildScene()
 
     // ============ VALVES (P&ID motor-valve symbol on pipelines) ============
     // Each QPointF is the exact pipe-centre point; addValve centres the bowtie there.
-    addValve("MV1", QPointF(780, 130), true);   // Overhead tank outlet (vertical pipe x=780)
+    addValve("MV1", QPointF(780, 90), true);   // Overhead tank outlet (vertical pipe x=780)
     addValve("MV2", QPointF(430, 168), true);   // Filter-1 inlet (vertical pipe x=430)
     addValve("MV3", QPointF(1030, 168), true);  // Filter-2 inlet (vertical pipe x=1030)
     addValve("MV4", QPointF(450, 350), true);   // Filter-1 outlet (vertical pipe x=450)
@@ -323,6 +357,7 @@ void ProcessFlowView::buildScene()
     addValve("MV6", QPointF(780, 565), true);   // Backwash isolation (vertical pipe x=780)
     addValve("MV7", QPointF(990, 475), true);   // Chlorine inlet (horizontal pipe y=475)
     addValve("MV8", QPointF(1310, 475), true);  // Distribution outlet (horizontal pipe y=475)
+    addValve("MV9", QPointF(220, 112), true);   // Clarified-water inlet header (just ahead of first arrow at x=180)
 }
 
 void ProcessFlowView::addEquipment(const QString &title, const QRectF &rect, const QColor &fill, int pointSize)
