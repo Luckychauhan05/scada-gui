@@ -346,9 +346,10 @@ void AlumClariflocculatorView::animateRotation()
         m_rotationAngle -= 360.0;
     }
     for (QGraphicsItemGroup *grp : m_agitatorGroups) {
-        if (grp) {
-            grp->setRotation(m_rotationAngle);
-        }
+        if (!grp) continue;
+        if (grp == m_alumAgitatorOne && !m_pump1Running) continue;
+        if (grp == m_alumAgitatorTwo && !m_pump2Running) continue;
+        grp->setRotation(m_rotationAngle);
     }
 }
 
@@ -433,6 +434,8 @@ void AlumClariflocculatorView::buildScene()
     m_controlledPipelines.clear();
     m_arrows.clear();
     m_agitatorGroups.clear();
+    m_alumAgitatorOne = nullptr;
+    m_alumAgitatorTwo = nullptr;
     m_agitatorCenters.clear();
     m_ripples.clear();
     m_flowDots.clear();
@@ -562,8 +565,7 @@ void AlumClariflocculatorView::buildScene()
                                 clarRect.top() + clarRect.height() * 0.20);
 
     // ── Motors ───────────────────────────────────────────────────────────────
-    addMotor(m_scene, QPointF(alumTankOneCenter.x(), motorY), "MOTOR 1");
-    addMotor(m_scene, QPointF(alumTankTwoCenter.x(), motorY), "MOTOR 2");
+    addMotor(m_scene, QPointF(alumTankOneCenter.x(), motorY), "MOTOR");
     addMotor(m_scene, QPointF(flashCenter.x(), flashMotorY), "MIXER MOTOR");
     addMotor(m_scene, QPointF(clarAg5Center.x(), motorY), "AGITATOR 1");
     addMotor(m_scene, QPointF(clarBridgeCenter.x(), motorY), "BRIDGE MOTOR");
@@ -578,8 +580,10 @@ void AlumClariflocculatorView::buildScene()
     addShaft(m_scene, QPointF(clarAg6Center.x(), motorY + 40), clarAg6Center);
 
     // ── Agitators (rotating groups) ──────────────────────────────────────────
-    m_agitatorGroups << addPropeller(m_scene, alumTankOneCenter, 34);
-    m_agitatorGroups << addPropeller(m_scene, alumTankTwoCenter, 34);
+    m_alumAgitatorOne = addPropeller(m_scene, alumTankOneCenter, 34);
+    m_agitatorGroups << m_alumAgitatorOne;
+    m_alumAgitatorTwo = addPropeller(m_scene, alumTankTwoCenter, 34);
+    m_agitatorGroups << m_alumAgitatorTwo;
     m_agitatorGroups << addPropeller(m_scene, flashCenter, 40);
     m_agitatorGroups << addPropeller(m_scene, clarAg5Center, 32);
     m_agitatorGroups << addRakeArms(m_scene, clarBridgeCenter);
@@ -778,5 +782,22 @@ void AlumClariflocculatorView::buildScene()
         QFont("Segoe UI", 9, QFont::Bold),
         QColor("#8E2550"),
         QPointF(clarRect.center().x() + 16, 646),
+        LabelLayer);
+
+    // ── Raw water inlet: vertical pipe from screen bottom to inlet chamber bottom ──
+    const qreal rawInletX = inletRect.center().x();
+    QList<QPointF> rawInletPath = {
+        QPointF(rawInletX, 860),
+        QPointF(rawInletX, inletRect.bottom())
+    };
+    addPipe(QVector<QPointF>(rawInletPath.begin(), rawInletPath.end()), transferColor);
+    addArrow(QPointF(rawInletX, inletRect.bottom() + 2), 270);
+    addFlowDot(rawInletPath, transferColor, 0.0, 0.005);
+
+    addText(m_scene,
+        "RAW WATER INLET",
+        QFont("Segoe UI", 9, QFont::Bold),
+        QColor("#1E4F7A"),
+        QPointF(rawInletX + 12, 790),
         LabelLayer);
 }

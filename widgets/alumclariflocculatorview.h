@@ -70,6 +70,10 @@ private:
     QList<FlowDot> m_flowDots;
     QTimer *m_dotTimer;
 
+    // Dedicated agitator pointers for alum tanks (used to conditionally stop them)
+    QGraphicsItemGroup *m_alumAgitatorOne = nullptr;
+    QGraphicsItemGroup *m_alumAgitatorTwo = nullptr;
+
     // Clickable alum tank rects (stored from buildScene)
     QRectF m_alumTankOneRect;
     QRectF m_alumTankTwoRect;
